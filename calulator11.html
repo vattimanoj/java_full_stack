@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            width: 150px;
+            height: 100px;
+            font-size: 50px;
+        }
+        button{
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+    <h1> SIMPLE CALCULATOR</h1>
+    <input type="number" id="first">
+    <input type="number" id="secound">
+    <br><br><br><br><br>
+    <button onclick="add()" style="background-color: brown;">add</button>
+    <button onclick="sub()" style="background-color: yellow;">sub</button>
+    <button onclick="mul()" style="background-color: blue;">mul</button>
+    <button onclick="div()" style="background-color: brown;">div</button>
+    <h1 id="display"></h1>
+    
+ </center>   
+</body>
+<script>
+    function add(){
+        let val1=Number(document.getElementById("first").value);
+        let val2=Number(document.getElementById("secound").value);
+        document.getElementById("display").innerHTML=val1+val2;
+
+    }
+    function sub(){
+        let val1=Number(document.getElementById("first").value);
+        let val2=Number(document.getElementById("secound").value);
+        document.getElementById("display").innerHTML=val1-val2;
+
+    }function mul(){
+        let val1=Number(document.getElementById("first").value);
+        let val2=Number(document.getElementById("secound").value);
+        document.getElementById("display").innerHTML=val1*val2;
+
+    }function div(){
+        let val1=Number(document.getElementById("first").value);
+        let val2=Number(document.getElementById("secound").value);
+        document.getElementById("display").innerHTML=val2==0? "cannot not divide with zero":val1/val2;
+
+    }
+</script>
+</html>
